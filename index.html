@@ -22,10 +22,129 @@
 		</script>
 	</head>
 	<body>
+    <div id="time" style='position:static;left:0;top:0;color:white;padding:4px;'></div>
+<script type="text/javascript" charset="utf-8">
+(function() {
+  "use strict";
+
+  var op = document.getElementById('time'),
+    start = new Date();
+
+
+  //http://stackoverflow.com/a/1322830/24105
+  function interval(totalSec) {
+    var hours = parseInt(totalSec / 3600) % 24;
+    var minutes = parseInt(totalSec / 60) % 60;
+    var seconds = totalSec % 60;
+
+    var result = hours + "h " + minutes + "m " + Math.round(seconds) + "s";
+
+    return result;
+  }
+
+  function tick() {
+    var formattedTime = interval((new Date() - start) / 1000);
+    op.innerHTML = formattedTime;
+    document.title = formattedTime;
+    setTimeout(tick, 1000);
+  }
+  tick()
+})()
+</script>
+
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+
+        <section>
+          <h1>Web Tech</h1>
+          <h3>HTML, CSS, Javascript</h3>
+        </section>
+
+        <section data-markdown>
+          # HTML, HTTP, Web
+          Problem &xrarr; Solution  
+          ( Formatting and Sharing of information )
+        </section>
+
+        <section data-markdown>
+          ### Sample Scientific Paper
+          ![Book Screenshot](./screenshots/book-screenshot.png)
+        </section>
+
+        <section data-markdown>
+        ### How do you format a text document?
+        ```text
+        How to create a website?  -heading
+        An introduction by Khaja  -subheading
+        ...
+        Picture of a website      -image
+        citation of another paper -link
+        ```
+        </section>
+
+        <section data-markdown>
+        Formatting in Printing / Publishing industry
+        ![Marks](./screenshots/markup-marks.jpg)
+        </section>
+
+        <section data-markdown data-html>
+        ### Birth of HTML the Markup Language
+        ```html
+        &lt;h1&gt;How to create a website&lt;/h1&gt;?  -heading
+        &lt;h2&gt;An introduction by Khaja&lt;/h2&gt;  -subheading
+        ...
+        &lt;img src=&#39;./experiment-diagram.jpeg&#39; /&gt;    -image
+        &lt;a href=&#39;http://example.com/other-paper.html&#39;&gt;citation&lt;/a&gt;  -link
+        ```
+        </section>
+
+        <section data-markdown>
+        ## An HTML tag
+        ~~~
+        &lt;h1&gt; A heading &lt;/h1&gt;
+
+        &lt;h1&gt; &xrarr; opening tag
+        &lt;/h1&gt; &xrarr; closing tag
+        content &xrarr; A heading
+        ~~~
+        </section>
+
+        <section data-markdown>
+          ## A demo book page
+          [Book Page](./resources/book.complete.html)
+        </section>
+
+        <section data-markdown>
+          ## CSS demo
+          ```css
+          #wrapper {
+            background-color: #ddd;
+            border-radius: 5px;
+          }
+
+          #wrapper &xrarr; selector
+          { } &xrarr; block of properties
+          border-radius: &xrarr; property
+          5px &xrarr; value
+          ```
+        </section>
+
+        <section data-markdown>
+          ## CSS frameworks
+          [Bootstrap](./resources/bootstrap.complete.html)
+
+          - 12 column Grid
+          - Typography
+          - Icons
+          - JavaScript plugins
+        </section>
+
+        <section data-markdown>
+          ## Javascript demo
+          This presentation
+        </section>
+
 			</div>
 		</div>
 
@@ -46,5 +165,8 @@
 				]
 			});
 		</script>
+
+    <script>
+    </script>
 	</body>
 </html>

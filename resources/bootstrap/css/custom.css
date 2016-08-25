@@ -1,0 +1,40 @@
+.head-wrapper{
+  background-color: #ffffff;
+  background-image: url("/images/devbg.jpg");
+}
+.navbar{
+  margin-top: 20px;
+}
+
+.head-wrapper-inner{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing{
+  margin-top: 50px;
+}
+.marketing .col-lg-4 {
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
